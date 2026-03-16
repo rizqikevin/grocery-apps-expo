@@ -8,7 +8,7 @@
     "scheme": "groceryappsexpo",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/images/icon.png"
     },
     "android": {
       "adaptiveIcon": {
@@ -17,13 +17,15 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.rizqikevin.groceryappsexpo"
     },
     "web": {
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "@clerk/expo",
       "expo-router",
       [
         "expo-splash-screen",
@@ -34,7 +36,9 @@
             "imageWidth": 76
           }
         }
-      ]
+      ],
+      "@clerk/expo",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true,
