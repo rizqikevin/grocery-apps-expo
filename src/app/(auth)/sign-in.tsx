@@ -15,9 +15,8 @@ export default function SignInScreen() {
 
   const isGoogleClicked = loadingStrategy === "oauth_google";
   const isAppleClicked = loadingStrategy === "oauth_apple";
-  const isGitHubClicked = loadingStrategy === "oauth_github";
 
-  const isLoading = isAppleClicked || isGitHubClicked || isGoogleClicked;
+  const isLoading = isAppleClicked || isGoogleClicked;
 
   useEffect(() => {
     if (isSignedIn) {
@@ -43,8 +42,8 @@ export default function SignInScreen() {
       <View className="mt-6 rounded-[30px] border border-white/20 bg-white/10 p-3">
         <Image
           source={require("@/assets/images/auth.png")}
-          style={{ width: "90%", height: 300 }}
-          contentFit="cover"
+          style={{ width: "100%", height: 300 }}
+          contentFit="contain"
         />
       </View>
 
